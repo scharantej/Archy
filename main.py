@@ -18,26 +18,26 @@ class Architecture(db.Model):
 def index():
     return render_template('index.html')
 
-@app.route('/types')
-def types():
+@app.route('/types_of_architecture')
+def types_of_architecture():
     architectures = Architecture.query.all()
-    return render_template('types.html', architectures=architectures)
+    return render_template('types_of_architecture.html', architectures=architectures)
 
-@app.route('/history')
-def history():
-    return render_template('history.html')
+@app.route('/history_of_architecture')
+def history_of_architecture():
+    return render_template('history_of_architecture.html')
 
-@app.route('/materials')
-def materials():
-    return render_template('materials.html')
+@app.route('/materials_of_architecture')
+def materials_of_architecture():
+    return render_template('materials_of_architecture.html')
 
-@app.route('/tools')
-def tools():
-    return render_template('tools.html')
+@app.route('/tools_of_architecture')
+def tools_of_architecture():
+    return render_template('tools_of_architecture.html')
 
-@app.route('/careers')
-def careers():
-    return render_template('careers.html')
+@app.route('/careers_in_architecture')
+def careers_in_architecture():
+    return render_template('careers_in_architecture.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -45,7 +45,7 @@ def contact():
         name = request.form['name']
         email = request.form['email']
         message = request.form['message']
-        # send the email
+        # Send the email
         return render_template('contact.html', message='Your message has been sent.')
     else:
         return render_template('contact.html')
