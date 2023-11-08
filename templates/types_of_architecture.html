@@ -1,0 +1,19 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Types of Architecture</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Types of Architecture</h1>
+<ul>
+{% for architecture in architectures %}
+<li><a href="/architecture/{{ architecture.id }}">{{ architecture.name }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
